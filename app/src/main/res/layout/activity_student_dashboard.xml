@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Header Banner -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_dark"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tvWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_back"
+                android:textColor="@color/primary_container"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvStudentName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/college_name"
+                android:textColor="@color/primary_container"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Metric Counters Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="-16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/tvUpcomingCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:textColor="@color/primary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upcoming"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/tvRegCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textColor="@color/secondary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Registered"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/tvCertCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textColor="@color/accent"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Certificates"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Feature Grid Buttons -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:padding="12dp">
+
+            <!-- 1. Browse Events -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardBrowse"
+                style="@style/CardViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📅" android:textSize="24sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/browse_events" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 2. Search & Filter -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSearch"
+                style="@style/CardViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔍" android:textSize="24sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/search_events" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 3. My Events -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardMyEvents"
+                style="@style/CardViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎟️" android:textSize="24sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/my_events" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 4. Digital Event Pass -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDigitalPass"
+                style="@style/CardViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📱" android:textSize="24sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/digital_pass" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 5. Certificates -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCertificates"
+                style="@style/CardViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎓" android:textSize="24sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/certificates" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 6. Notifications -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardNotifs"
+                style="@style/CardViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔔" android:textSize="24sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/notifications" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 7. Favorites -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFavorites"
+                style="@style/CardViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⭐" android:textSize="24sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/favorite_events" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 8. Feedback -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFeedback"
+                style="@style/CardViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💬" android:textSize="24sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/feedback" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </GridLayout>
+
+        <!-- Registered Events Monthly Calendar Section -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Registered Events Calendar"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_badge"
+                        android:paddingStart="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="2dp"
+                        android:text="Monthly Schedule"
+                        android:textColor="@color/primary"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Tap any date to view scheduled event details"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp" />
+
+                <!-- Android CalendarView Widget -->
+                <CalendarView
+                    android:id="@+id/calendarViewDashboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="8dp"
+                    android:firstDayOfWeek="1"
+                    android:showWeekNumber="false" />
+
+                <TextView
+                    android:id="@+id/tvCalendarSelectedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Registered Events on Selected Date"
+                    android:textColor="@color/primary"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCalendarEmptyState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:background="@drawable/bg_rounded_card"
+                    android:text="No registered events scheduled on this date"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCalendarRegisteredEvents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:nestedScrollingEnabled="false"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Event List Search & Filter Bar Section -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Explore Events"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Search and filter events by category or date"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp" />
+
+                <!-- Search Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Search events, venue or date..."
+                    app:startIconDrawable="@android:drawable/ic_menu_search"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDashboardSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textSize="13sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Filter Controls Row: Category Spinner & Date Picker Button -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Category"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spDashboardCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@android:drawable/btn_dropdown"
+                            android:spinnerMode="dropdown" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Filter by Date"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btnDashboardDateFilter"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:paddingStart="6dp"
+                            android:paddingEnd="6dp"
+                            android:text="Pick Date 📅"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Reset Filters Button -->
+                <Button
+                    android:id="@+id/btnDashboardResetFilter"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="4dp"
+                    android:text="Reset Filters"
+                    android:textColor="@color/primary"
+                    android:textSize="11sp" />
+
+                <!-- Events RecyclerView -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvDashboardEvents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:nestedScrollingEnabled="false" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/btnLogout"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/logout"
+            android:textColor="@color/status_cancelled" />
+    </LinearLayout>
+</ScrollView>

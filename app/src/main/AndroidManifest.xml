@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.eventmanagementapp">
+
+    <!-- Permissions for QR scanning, Push Notifications & Event Reminders -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EventManagementApp"
+        tools:targetApi="31">
+
+        <!-- Splash / Main Activity (Launcher) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Authentication Activities -->
+        <activity android:name=".LoginActivity" android:exported="false" />
+        <activity android:name=".StudentSignupActivity" android:exported="false" />
+        <activity android:name=".ForgotPasswordActivity" android:exported="false" />
+
+        <!-- Student Module Activities -->
+        <activity android:name=".student.StudentDashboardActivity" android:exported="false" />
+        <activity android:name=".student.EventSearchActivity" android:exported="false" />
+        <activity android:name=".student.EventDetailsActivity" android:exported="false" />
+        <activity android:name=".student.EventRegistrationActivity" android:exported="false" />
+        <activity android:name=".student.MyEventsActivity" android:exported="false" />
+        <activity android:name=".student.FavoriteEventsActivity" android:exported="false" />
+        <activity android:name=".student.DigitalPassActivity" android:exported="false" />
+        <activity android:name=".student.ProfileActivity" android:exported="false" />
+        <activity android:name=".student.NotificationsActivity" android:exported="false" />
+        <activity android:name=".student.CertificateActivity" android:exported="false" />
+        <activity android:name=".student.FeedbackActivity" android:exported="false" />
+        <activity android:name=".student.CalendarActivity" android:exported="false" />
+
+        <!-- Staff Module Activities -->
+        <activity android:name=".staff.StaffDashboardActivity" android:exported="false" />
+        <activity android:name=".staff.CreateEventActivity" android:exported="false" />
+        <activity android:name=".staff.ManageEventsActivity" android:exported="false" />
+        <activity android:name=".staff.EditEventActivity" android:exported="false" />
+        <activity android:name=".staff.StudentListActivity" android:exported="false" />
+        <activity android:name=".staff.RegistrationManagementActivity" android:exported="false" />
+        <activity android:name=".staff.AttendanceActivity" android:exported="false" />
+        <activity android:name=".staff.QRScannerActivity" android:exported="false" />
+        <activity android:name=".staff.ReportsActivity" android:exported="false" />
+        <activity android:name=".staff.FeedbackManagementActivity" android:exported="false" />
+
+        <!-- Admin Module Activities -->
+        <activity android:name=".admin.AdminDashboardActivity" android:exported="false" />
+        <activity android:name=".admin.ManageStudentsActivity" android:exported="false" />
+        <activity android:name=".admin.ManageStaffActivity" android:exported="false" />
+        <activity android:name=".admin.EventApprovalActivity" android:exported="false" />
+        <activity android:name=".admin.AdminEventManagementActivity" android:exported="false" />
+        <activity android:name=".admin.AdminReportsActivity" android:exported="false" />
+        <activity android:name=".admin.ActivityLogActivity" android:exported="false" />
+        <activity android:name=".admin.SettingsActivity" android:exported="false" />
+        <activity android:name=".admin.HelpFaqActivity" android:exported="false" />
+
+        <!-- ZXing Capture Activity for Barcode Scanner -->
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            tools:replace="android:screenOrientation" />
+
+        <!-- BroadcastReceiver for Push Event Reminders via AlarmManager -->
+        <receiver
+            android:name=".receiver.EventReminderReceiver"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">College Event Management System - Android App</string>
+    <string name="college_name">National Institute of Engineering &amp; Technology</string>
+    <string name="college_subtitle">Autonomous Campus • Accredited 'A++' Grade</string>
+
+    <!-- Auth -->
+    <string name="login_title">Campus Event Portal</string>
+    <string name="login_subtitle">Sign in to access events, passes &amp; certificates</string>
+    <string name="username_hint">Username or Email</string>
+    <string name="password_hint">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="no_account">New Student? Register here</string>
+    <string name="signup_title">Student Registration</string>
+
+    <!-- Dashboard -->
+    <string name="welcome_back">Welcome back,</string>
+    <string name="upcoming_events">Upcoming Events</string>
+    <string name="my_registrations">My Registrations</string>
+    <string name="notifications">Notifications</string>
+    <string name="certificates">Certificates</string>
+
+    <!-- Navigation -->
+    <string name="browse_events">Browse Events</string>
+    <string name="search_events">Search &amp; Filter</string>
+    <string name="my_events">My Events</string>
+    <string name="favorite_events">Favorites</string>
+    <string name="digital_pass">Digital Event Pass</string>
+    <string name="feedback">Feedback</string>
+    <string name="calendar">Event Calendar</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+
+    <!-- Staff -->
+    <string name="create_event">Create Event</string>
+    <string name="manage_events">Manage Events</string>
+    <string name="attendance">Attendance &amp; Check-In</string>
+    <string name="qr_scanner">QR Code Scanner</string>
+    <string name="reports">Reports &amp; Analytics</string>
+
+    <!-- Admin -->
+    <string name="manage_students">Manage Students</string>
+    <string name="manage_staff">Manage Staff</string>
+    <string name="event_approval">Event Approvals</string>
+    <string name="activity_logs">Activity Audit Logs</string>
+    <string name="settings">Settings</string>
+    <string name="help_faq">Help &amp; FAQ</string>
+</resources>

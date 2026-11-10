@@ -1,0 +1,6 @@
+{
+  "name": "College Event Management System - Android App",
+  "description": "Complete, production-grade Android Studio application with Java, XML layouts, SQLiteOpenHelper, role-based dashboards (Admin, Staff, Student), QR event passes, attendance tracking, and certificate generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
