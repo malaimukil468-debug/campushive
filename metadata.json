@@ -1,6 +1,8 @@
 {
-  "name": "College Event Management System - Android App",
-  "description": "Complete, production-grade Android Studio application with Java, XML layouts, SQLiteOpenHelper, role-based dashboards (Admin, Staff, Student), QR event passes, attendance tracking, and certificate generation.",
+  "name": "CampusHive",
+  "description": "College Event Management System Android app with role-based dashboards (Student, Staff, Admin), Room SQLite persistence, QR event passes, attendance tracking, certificate verification, and analytics.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
